@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DARUMA WORKS（だるまワークス）｜だるまの卸売・OEM・オリジナルブランド</title>
+<meta name="description" content="だるまの企画・製造・卸売・OEMを手がけるDARUMA WORKS（だるまワークス）の公式サイト。オリジナルだるまの販売、法人向け名入れ・オリジナル制作、国内外への卸売と、だるまの文化を伝えるメディアを運営しています。">
+<style>
+  :root{
+    --red:#a6192e;
+    --red-dark:#7e1122;
+    --ink:#222222;
+    --sub:#6b6b6b;
+    --line:#e7e0d8;
+    --paper:#ffffff;
+    --soft:#faf7f2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.9;letter-spacing:.03em;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.mincho{font-family:"Hiragino Mincho ProN","Hiragino Mincho Pro","Yu Mincho","YuMincho","MS PMincho",serif;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:19px;font-weight:600;letter-spacing:.18em;}
+  .logo span{color:var(--red);}
+  .logo small{display:block;font-size:10px;letter-spacing:.32em;color:var(--sub);font-family:inherit;}
+  nav{display:flex;gap:26px;font-size:13px;letter-spacing:.08em;}
+  nav a{color:#444;}
+  nav a:hover{color:var(--red);}
+  @media(max-width:860px){ .header-inner{height:auto;flex-wrap:wrap;padding:10px 0;row-gap:8px;} nav{flex-wrap:wrap;gap:8px 18px;font-size:12px;} }
+
+  /* Hero */
+  .hero{background:var(--soft);}
+  .hero-img{max-height:560px;overflow:hidden;}
+  .hero-img img{width:100%;height:100%;object-fit:cover;}
+  .hero-text{text-align:center;padding:72px 24px 80px;}
+  .hero-text .eyebrow{font-size:11px;letter-spacing:.42em;color:var(--red);margin-bottom:22px;}
+  .hero-text h1{font-size:clamp(30px,5vw,50px);font-weight:600;line-height:1.5;letter-spacing:.12em;}
+  .hero-text p{margin:26px auto 0;color:var(--sub);font-size:15px;max-width:640px;}
+
+  /* Sections */
+  section{padding:96px 0;}
+  section.soft{background:var(--soft);}
+  .section-head{text-align:center;margin-bottom:52px;}
+  .section-head .eyebrow{font-size:11px;letter-spacing:.42em;color:var(--red);margin-bottom:14px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,34px);font-weight:600;letter-spacing:.14em;}
+  .section-head p{color:var(--sub);font-size:14px;margin-top:14px;max-width:680px;margin-left:auto;margin-right:auto;}
+
+  /* Vision */
+  .vision-text{max-width:760px;margin:0 auto;text-align:center;}
+  .vision-text .lead{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:clamp(19px,2.6vw,25px);line-height:2.1;letter-spacing:.08em;}
+  .vision-text p.body{margin-top:28px;color:#444;font-size:14.5px;text-align:left;}
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1000px;margin:56px auto 0;}
+  .pillar{border:1px solid var(--line);padding:30px 24px;background:#fff;text-align:center;}
+  .pillar h3{font-size:16px;letter-spacing:.12em;margin-bottom:10px;color:var(--red-dark);}
+  .pillar p{font-size:13px;color:var(--sub);text-align:left;}
+  @media(max-width:760px){ .pillars{grid-template-columns:1fr;} }
+
+  /* Business */
+  .biz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;}
+  @media(max-width:760px){ .biz-grid{grid-template-columns:1fr;} }
+  .biz-card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;}
+  .biz-card .ph{overflow:hidden;background:var(--soft);}
+  .biz-card .ph img{width:100%;height:auto;transition:transform .5s ease;}
+  .biz-card:hover .ph img{transform:scale(1.03);}
+  .biz-card .body{padding:28px 28px 30px;flex:1;display:flex;flex-direction:column;}
+  .biz-card .no{font-size:11px;letter-spacing:.34em;color:var(--red);}
+  .biz-card h3{font-size:19px;letter-spacing:.1em;margin:8px 0 12px;}
+  .biz-card p{font-size:13.5px;color:#555;flex:1;}
+  .biz-card .more{margin-top:18px;font-size:12.5px;letter-spacing:.14em;color:var(--red-dark);}
+  .biz-card .more:hover{text-decoration:underline;}
+
+  /* Daruma knowledge */
+  .know-lead{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:64px;}
+  @media(max-width:760px){ .know-lead{grid-template-columns:1fr;} }
+  .know-lead img{width:100%;height:auto;}
+  .know-lead h3{font-size:21px;letter-spacing:.1em;margin-bottom:14px;}
+  .know-lead p{font-size:14px;color:#444;}
+  .sub-head{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:20px;letter-spacing:.12em;margin:56px 0 8px;padding-left:14px;border-left:3px solid var(--red);}
+  .sub-desc{font-size:13.5px;color:var(--sub);margin-bottom:24px;}
+  .color-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:900px){ .color-grid{grid-template-columns:repeat(2,1fr);} }
+  .color-item{border:1px solid var(--line);background:#fff;padding:18px 16px;}
+  .color-item .dot{display:inline-block;width:14px;height:14px;border-radius:50%;margin-right:8px;vertical-align:-2px;border:1px solid rgba(0,0,0,.12);}
+  .color-item h4{font-size:15px;display:inline;letter-spacing:.06em;}
+  .color-item p{font-size:12.5px;color:var(--sub);margin-top:8px;}
+  table.data{width:100%;border-collapse:collapse;background:#fff;font-size:13.5px;}
+  table.data th,table.data td{border:1px solid var(--line);padding:10px 12px;text-align:left;}
+  table.data th{background:var(--soft);font-weight:600;letter-spacing:.06em;white-space:nowrap;}
+  table.data td.num{text-align:right;white-space:nowrap;}
+  .note{font-size:12px;color:var(--sub);margin-top:12px;}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:760px){ .steps{grid-template-columns:1fr;} }
+  .step{border:1px solid var(--line);background:#fff;padding:26px 22px;}
+  .step .n{font-family:"Hiragino Mincho ProN",serif;font-size:24px;color:var(--red);}
+  .step h4{font-size:15.5px;margin:6px 0 8px;letter-spacing:.08em;}
+  .step p{font-size:13px;color:#555;}
+
+  /* Blog teaser */
+  .post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  @media(max-width:860px){ .post-grid{grid-template-columns:1fr;} }
+  .post-card{border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;}
+  .post-card .ph{overflow:hidden;background:var(--soft);}
+  .post-card .ph img{width:100%;height:auto;transition:transform .5s ease;}
+  .post-card:hover .ph img{transform:scale(1.03);}
+  .post-card .body{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column;}
+  .post-card .meta{font-size:11.5px;color:var(--sub);letter-spacing:.1em;}
+  .post-card .meta .cat{color:var(--red);}
+  .post-card h3{font-size:16px;line-height:1.7;margin:8px 0;letter-spacing:.05em;}
+  .post-card p{font-size:13px;color:var(--sub);flex:1;}
+  .center-btn{text-align:center;margin-top:44px;}
+  .btn{
+    display:inline-block;padding:14px 44px;border:1px solid var(--ink);
+    font-size:13px;letter-spacing:.22em;transition:background .25s,color .25s;background:#fff;color:var(--ink);
+  }
+  .btn:hover{background:var(--ink);color:#fff;}
+  .btn.red{border-color:var(--red);color:var(--red);}
+  .btn.red:hover{background:var(--red);color:#fff;}
+
+  /* News */
+  .news-list{max-width:820px;margin:0 auto;}
+  .news-item{display:flex;gap:28px;padding:20px 8px;border-bottom:1px solid var(--line);align-items:baseline;}
+  .news-item:first-child{border-top:1px solid var(--line);}
+  .news-item time{font-size:12.5px;color:var(--sub);letter-spacing:.1em;white-space:nowrap;}
+  .news-item .tag{font-size:11px;border:1px solid var(--red);color:var(--red);padding:2px 10px;white-space:nowrap;letter-spacing:.1em;}
+  .news-item p{font-size:14px;}
+  @media(max-width:640px){ .news-item{flex-direction:column;gap:6px;} }
+
+  /* Company */
+  table.company{width:100%;max-width:820px;margin:0 auto;border-collapse:collapse;font-size:14px;background:#fff;}
+  table.company th,table.company td{border:1px solid var(--line);padding:14px 18px;text-align:left;vertical-align:top;}
+  table.company th{background:var(--soft);width:180px;font-weight:600;letter-spacing:.08em;white-space:nowrap;}
+  @media(max-width:640px){ table.company th{width:110px;} }
+
+  /* Contact */
+  .contact-box{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--line);padding:40px 36px;}
+  .contact-box label{display:block;font-size:13px;letter-spacing:.08em;margin:20px 0 6px;}
+  .contact-box label:first-child{margin-top:0;}
+  .contact-box input,.contact-box select,.contact-box textarea{
+    width:100%;border:1px solid var(--line);padding:12px;font-size:14px;font-family:inherit;background:#fff;
+  }
+  .contact-box textarea{min-height:140px;resize:vertical;}
+  .contact-box .submit{margin-top:28px;text-align:center;}
+  .contact-note{font-size:12px;color:var(--sub);text-align:center;margin-top:16px;}
+
+  /* Footer */
+  footer{background:#1d1d1d;color:#ddd;padding:56px 0 40px;}
+  .footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-start;}
+  .footer-logo{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:16px;letter-spacing:.2em;color:#fff;}
+  .footer-logo span{color:#e0586e;}
+  .footer-links{display:flex;gap:22px;font-size:12.5px;flex-wrap:wrap;}
+  .footer-links a:hover{color:#fff;}
+  .copy{margin-top:30px;font-size:11.5px;color:#999;letter-spacing:.06em;}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+  DARUMA WORKS（だるまワークス）公式サイト
+  ※お問い合わせフォームは mailto 方式で naoren.38@gmail.com 宛に接続済みです（送信ボタンでメールアプリが開きます）。
+============================================================ -->
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">DARUMA <span>WORKS</span><small>だるまワークス</small></a>
+    <nav>
+      <a href="#vision">ビジョン</a>
+      <a href="#business">事業紹介</a>
+      <a href="#about-daruma">だるまについて</a>
+      <a href="#reading">読みもの</a>
+      <a href="blog/index.html">ブログ</a>
+      <a href="#news">お知らせ</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-img">
+      <img src="images/hero.jpg" alt="赤いだるまのイメージ">
+    </div>
+    <div class="hero-text">
+      <p class="eyebrow">DARUMA WORKS</p>
+      <h1>願いを、かたちに。<br>だるまを、世界へ。</h1>
+      <p>転んでも起き上がるだるまは、目標に向かう人の背中を押し続けてきた日本の縁起物です。私たちは、職人の手仕事を守りながら、だるまの新しい届け方をつくります。</p>
+    </div>
+  </div>
+
+  <!-- Vision -->
+  <section id="vision">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">VISION</p>
+        <h2>ビジョン</h2>
+      </div>
+      <div class="vision-text">
+        <p class="lead">七転び八起きの精神を、<br>次の世代と、世界の日常へ。</p>
+        <p class="body">だるまは、願いを込めて目を入れ、叶ったらもう一方の目を入れる「参加型」の縁起物です。その文化は、受験や商売繁盛のお守りとしてだけでなく、目標管理の道具として海外でも静かな広がりを見せています。一方で、産地の職人の高齢化と後継者不足は深刻です。DARUMA WORKSは、卸売・OEM・自社ブランド・メディアの4つの事業を通じて需要を生み出し、作り手に正当な対価が戻る循環をつくることで、この文化を持続可能な産業として残すことを目指します。</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>作り手を守る</h3>
+          <p>産地の工房と直接取引し、適正な価格と継続的な発注で、技術と雇用を次代につなぎます。</p>
+        </div>
+        <div class="pillar">
+          <h3>意味を伝える</h3>
+          <p>色の意味、サイズの選び方、目入れの作法。一次情報を丁寧に整理し、正しい知識とともに届けます。</p>
+        </div>
+        <div class="pillar">
+          <h3>世界へ広げる</h3>
+          <p>海外の小売・イベント・贈答需要に応え、日本の縁起物を世界の「目標達成の象徴」にします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business -->
+  <section id="business" class="soft">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">BUSINESS</p>
+        <h2>事業紹介</h2>
+        <p>ブランド、法人・OEM、卸売、メディア。だるまを「つくる・届ける・伝える」4つの事業を展開しています。</p>
+      </div>
+      <div class="biz-grid">
+
+        <article class="biz-card">
+          <div class="ph"><img src="images/biz-brand.jpg" alt="オリジナルだるまの商品イメージ"></div>
+          <div class="body">
+            <p class="no">BUSINESS 01</p>
+            <h3>ブランド｜オリジナルだるま</h3>
+            <p>定番の赤に加え、現代の暮らしに馴染む色とサイズを企画した自社ブランドのだるまを展開。贈答用パッケージや、目標達成を記録するカードを添えたセット商品など、「飾る・贈る・使う」場面から逆算した商品づくりを行います。</p>
+            <a class="more" href="#contact">取扱いのお問い合わせ →</a>
+          </div>
+        </article>
+
+        <article class="biz-card">
+          <div class="ph"><img src="images/biz-oem.jpg" alt="名入れ・オリジナル制作のイメージ"></div>
+          <div class="body">
+            <p class="no">BUSINESS 02</p>
+            <h3>法人・OEM｜名入れ・オリジナル制作</h3>
+            <p>企業ロゴや文字の名入れ、周年記念・ノベルティ・選挙事務所向け、店舗の開店祝いなど、法人需要に応えるオリジナルだるまの制作に対応します。小ロットの相談から、デザイン案の作成、納期の調整まで一貫してサポートします。</p>
+            <a class="more" href="#contact">OEMのご相談 →</a>
+          </div>
+        </article>
+
+        <article class="biz-card">
+          <div class="ph"><img src="images/biz-wholesale.jpg" alt="だるまの卸売イメージ"></div>
+          <div class="body">
+            <p class="no">BUSINESS 03</p>
+            <h3>卸売｜国内外への供給</h3>
+            <p>小売店・神社仏閣の授与所・イベント事業者向けに、定番サイズのだるまを安定供給します。海外向けには、破損しにくい梱包仕様と英語の説明資料を用意し、輸出手続きの相談にも応じます。在庫と納期はお問い合わせください。</p>
+            <a class="more" href="#contact">卸条件のご相談 →</a>
+          </div>
+        </article>
+
+        <article class="biz-card">
+          <div class="ph"><img src="images/post-colors.jpg" alt="だるまメディアの記事イメージ"></div>
+          <div class="body">
+            <p class="no">BUSINESS 04</p>
+            <h3>メディア｜だるまの読みもの</h3>
+            <p>色の意味、サイズの選び方、目入れと供養の作法、産地と職人の仕事。だるまにまつわる一次情報を、専門メディアとして継続的に発信します。販売の前に「正しく知る」体験を提供することが、産地全体の信頼につながると考えています。</p>
+            <a class="more" href="blog/index.html">読みもの一覧 →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Daruma -->
+  <section id="about-daruma">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">ABOUT DARUMA</p>
+        <h2>だるまについて</h2>
+        <p>色の意味、サイズの目安、目入れの作法。だるまを選ぶ前に知っておきたい基本情報をまとめました。</p>
+      </div>
+
+      <div class="know-lead">
+        <div>
+          <img src="images/about-daruma.jpg" alt="色とりどりのだるまが並ぶイメージ">
+        </div>
+        <div>
+          <h3>だるまとは</h3>
+          <p>だるまは、禅宗の開祖・達磨大師の座禅姿をかたどった張り子の人形です。重心が低く、倒しても起き上がる構造から「七転び八起き」の象徴とされ、江戸時代以降、商売繁盛や開運招福の縁起物として親しまれてきました。現在の代表的な産地は群馬県高崎市で、全国の生産の多くを占めます。白い目に自分で墨を入れるのが特徴で、願いを込める行為そのものが、だるま文化の中心にあります。</p>
+        </div>
+      </div>
+
+      <h3 class="sub-head">色の意味</h3>
+      <p class="sub-desc">色ごとに込められた願いが異なります。贈る相手や叶えたい願いに合わせて選ぶのが、だるまらしい楽しみ方です。意味づけは地域や作り手によって多少異なります。</p>
+      <div class="color-grid">
+        <div class="color-item">
+          <span class="dot" style="background:#c8102e;"></span><h4>赤</h4>
+          <p>開運招福・家内安全の定番色。魔除けの色ともされ、あらゆる願いの基本です。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#ffffff;"></span><h4>白</h4>
+          <p>目標達成・合格祈願。純粋さと始まりを表し、受験や資格取得のお守りに。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#222222;"></span><h4>黒</h4>
+          <p>厄除け・除災招福。引き締まった佇まいで、店舗や事務所の守り神にも選ばれます。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#d4a017;"></span><h4>金</h4>
+          <p>金運上昇・財運。商売繁盛の願いと相性がよく、開店祝いの定番でもあります。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#2456a6;"></span><h4>青</h4>
+          <p>仕事運・出世。冷静さと信頼を表し、昇進や転職の節目に贈られます。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#3d9970;"></span><h4>緑</h4>
+          <p>健康・長寿。穏やかな実りの色で、ご家族の健康祈願に選ばれます。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#f2c230;"></span><h4>黄</h4>
+          <p>幸運・夢の実現。明るさをもたらす色として、挑戦する人への贈り物に。</p>
+        </div>
+        <div class="color-item">
+          <span class="dot" style="background:#e88bb0;"></span><h4>ピンク</h4>
+          <p>恋愛成就・良縁。やさしい色合いで、出会いや結婚の願いを込める色です。</p>
+        </div>
+      </div>
+
+      <h3 class="sub-head">サイズと号数の換算表</h3>
+      <p class="sub-desc">だるまのサイズは「号数」で表され、号数が大きいほど高さも大きくなります。以下は高さの目安です（メーカー・工房により数センチ異なる場合があります）。</p>
+      <table class="data">
+        <thead>
+          <tr><th>号数</th><th>高さの目安</th><th>おすすめの用途</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0〜1号</td><td class="num">約3.5〜6cm</td><td>てのひらサイズ。ストラップやミニギフト、まとめ買い用</td></tr>
+          <tr><td>2号</td><td class="num">約9cm</td><td>デスクや玄関に。初めてのだるまにちょうどよいサイズ</td></tr>
+          <tr><td>3号</td><td class="num">約12cm</td><td>受験・合格祈願の定番。贈答にも選ばれます</td></tr>
+          <tr><td>4号</td><td class="num">約15cm</td><td>店舗のレジ横や事務所の棚に</td></tr>
+          <tr><td>5号</td><td class="num">約18cm</td><td>開店祝い・周年記念など、存在感のある贈答用</td></tr>
+          <tr><td>6〜7号</td><td class="num">約21〜24cm</td><td>神棚や店頭ディスプレイに</td></tr>
+          <tr><td>8〜10号</td><td class="num">約27〜30cm</td><td>事務所の顔として。団体・法人の願掛け用</td></tr>
+          <tr><td>12号以上</td><td class="num">約36cm〜</td><td>イベントや式典、大きな願いのシンボルに（特注対応も可）</td></tr>
+        </tbody>
+      </table>
+      <p class="note">※高さは一般的な目安です。実際の寸法は製造元・型により異なります。用途に迷う場合はお問い合わせください。</p>
+
+      <h3 class="sub-head">目入れの作法</h3>
+      <p class="sub-desc">だるまの白い目に墨を入れる「目入れ（開眼）」は、目標を定めて決意する儀式です。基本の流れは次の3ステップです。</p>
+      <div class="steps">
+        <div class="step">
+          <p class="n">一</p>
+          <h4>願いを決め、左目を入れる</h4>
+          <p>叶えたい目標をひとつに絞り、心に念じながら、だるまの左目（向かって右側の目と説明されることもあります）に墨やペンで黒目を描き入れます。具体的な目標ほど、後の努力の指針になります。</p>
+        </div>
+        <div class="step">
+          <p class="n">二</p>
+          <h4>見える場所に置く</h4>
+          <p>目を入れたら、毎日目に触れる場所に置きます。だるまの視線が、目標を忘れずに行動し続けるための静かなリマインダーになります。</p>
+        </div>
+        <div class="step">
+          <p class="n">三</p>
+          <h4>成就したら右目を入れ、感謝を伝える</h4>
+          <p>目標が叶ったら、もう一方の目を入れて両目を開眼させます。役目を終えただるまは、購入した寺社や神社のお焚き上げ、だるま供養に納めるのが習わしです。1年で叶わなかった場合も、感謝を込めて供養し、新しいだるま迎えることがあります。</p>
+        </div>
+      </div>
+      <p class="note">※目を入れる側や順序には地域・流派による違いがあります。贈答先の慣習が分かる場合はそれに合わせてください。詳しくはブログ記事「目入れの作法と、役目を終えたら」もご覧ください。</p>
+    </div>
+  </section>
+
+  <!-- Reading / Blog -->
+  <section id="reading" class="soft">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">READING</p>
+        <h2>読みもの</h2>
+        <p>だるまの選び方から作法、産地の話まで。専門メディアとして一次情報を発信しています。</p>
+      </div>
+      <div class="post-grid">
+        <article class="post-card">
+          <a class="ph" href="blog/post-takasaki.html"><img src="images/post-takasaki.jpg" alt="高崎の工房に並ぶだるまのイメージ"></a>
+          <div class="body">
+            <p class="meta"><time>2026.10.31</time>　<span class="cat">産地と歴史</span></p>
+            <h3><a href="blog/post-takasaki.html">高崎だるまとは ― 産地と歴史、なぜ高崎が「だるまの里」なのか</a></h3>
+            <p>少林山達磨寺と天明の飢饉から始まった産地の歩みと、眉は鶴・髭は亀という縁起の意匠、高崎が日本一の産地である理由を解説します。</p>
+          </div>
+        </article>
+        <article class="post-card">
+          <a class="ph" href="blog/post-oem.html"><img src="images/post-oem.jpg" alt="名入れをする職人の手元のイメージ"></a>
+          <div class="body">
+            <p class="meta"><time>2026.10.31</time>　<span class="cat">法人・OEM</span></p>
+            <h3><a href="blog/post-oem.html">オリジナルだるま・名入れだるまの作り方と発注の流れ</a></h3>
+            <p>ロゴや文字を入れる方法から、デザイン確認・納品までの6ステップと、法人発注で失敗しない注意点をまとめました。</p>
+          </div>
+        </article>
+        <article class="post-card">
+          <a class="ph" href="blog/post-novelty.html"><img src="images/post-novelty.jpg" alt="ギフトボックスに入った小さなだるまのイメージ"></a>
+          <div class="body">
+            <p class="meta"><time>2026.10.30</time>　<span class="cat">法人・OEM</span></p>
+            <h3><a href="blog/post-novelty.html">法人ノベルティにだるまが選ばれる理由 ― 記憶に残る記念品の条件</a></h3>
+            <p>捨てられず、飾られ続ける記念品とは。周年記念やノベルティにだるまが選ばれる理由と活用シーンを紹介します。</p>
+          </div>
+        </article>
+      </div>
+      <div class="center-btn">
+        <a class="btn red" href="blog/index.html">読みもの一覧へ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">NEWS</p>
+        <h2>お知らせ</h2>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <time>2026.10.31</time><span class="tag">メディア</span>
+          <p>「読みもの」に新しい記事を10本追加しました。高崎だるまの歴史、名入れ・OEMの発注ガイド、だるまの値段の相場など、選ぶ・贈る・発注する際に役立つ情報を公開しています。</p>
+        </div>
+        <div class="news-item">
+          <time>2026.10.30</time><span class="tag">ご案内</span>
+          <p>DARUMA WORKSのウェブサイトを開設しました。事業内容とだるまの基礎知識を公開しています。</p>
+        </div>
+        <div class="news-item">
+          <time>2026.10.20</time><span class="tag">法人向け</span>
+          <p>年末年始のノベルティ・記念品向けに、名入れだるまの受付を開始しました。納期のご相談はお早めにどうぞ。</p>
+        </div>
+        <div class="news-item">
+          <time>2026.10.05</time><span class="tag">メディア</span>
+          <p>専門メディア「読みもの」を開設しました。だるまの色・サイズ・作法の解説記事を公開しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">CONTACT</p>
+        <h2>お問い合わせ</h2>
+        <p>卸売の条件、OEM・名入れのご相談、メディアへのお問い合わせなど、お気軽にご連絡ください。</p>
+        <p>メールでのお問い合わせ：<a href="mailto:naoren.38@gmail.com">naoren.38@gmail.com</a></p>
+      </div>
+      <!-- お問い合わせフォーム：送信ボタンでメールアプリが開く mailto 方式。宛先は naoren.38@gmail.com、件名・本文にはフォーム入力内容を自動で組み込みます -->
+      <form class="contact-box" id="contact-form">
+        <label for="c-name">お名前</label>
+        <input id="c-name" name="name" type="text" placeholder="山田 太郎">
+        <label for="c-company">会社名・団体名</label>
+        <input id="c-company" name="company" type="text" placeholder="株式会社〇〇">
+        <label for="c-email">メールアドレス</label>
+        <input id="c-email" name="email" type="email" placeholder="example@example.co.jp">
+        <label for="c-type">お問い合わせ種別</label>
+        <select id="c-type" name="type">
+          <option>卸売について</option>
+          <option>OEM・名入れについて</option>
+          <option>ブランド商品の取扱いについて</option>
+          <option>メディア・取材について</option>
+          <option>その他</option>
+        </select>
+        <label for="c-message">お問い合わせ内容</label>
+        <textarea id="c-message" name="message" placeholder="ご相談内容をご記入ください"></textarea>
+        <div class="submit">
+          <button class="btn red" type="submit">送信する</button>
+        </div>
+        <p class="contact-note">※送信ボタンを押すとメールアプリが開きます。宛先と内容をご確認のうえ、そのまま送信してください。</p>
+      </form>
+      <script>
+      document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = document.getElementById('c-name').value;
+        var company = document.getElementById('c-company').value;
+        var email = document.getElementById('c-email').value;
+        var type = document.getElementById('c-type').value;
+        var message = document.getElementById('c-message').value;
+        var subject = '【DARUMA WORKS】お問い合わせ（' + type + '）';
+        var body = 'お名前：' + name + '\n'
+          + '会社名・団体名：' + company + '\n'
+          + 'メールアドレス：' + email + '\n'
+          + 'お問い合わせ種別：' + type + '\n\n'
+          + '【お問い合わせ内容】\n' + message;
+        window.location.href = 'mailto:naoren.38@gmail.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+      });
+      </script>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p class="footer-logo">DARUMA <span>WORKS</span></p>
+      <div class="footer-links">
+        <a href="#vision">ビジョン</a>
+        <a href="#business">事業紹介</a>
+        <a href="#about-daruma">だるまについて</a>
+        <a href="blog/index.html">ブログ</a>
+        <a href="#news">お知らせ</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 DARUMA WORKS. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
