@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブログ・読みもの | DARUMA WORKS（だるまワークス）</title>
+<meta name="description" content="DARUMA WORKS（だるまワークス）のブログ。だるまの色の意味、サイズの選び方、目入れと供養の作法など、だるまにまつわる読みものを届けます。">
+<style>
+  :root{
+    --accent:#a6192e;
+    --text:#222;
+    --bg:#fff;
+    --bg-light:#faf7f2;
+    --border:#e8e0d5;
+    --muted:#6b6259;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",sans-serif;
+    color:var(--text);background:var(--bg);line-height:1.8;font-size:16px;
+  }
+  h1,h2,h3,.serif{
+    font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;
+    line-height:1.5;font-weight:600;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%;display:block}
+  .site-header{
+    border-bottom:3px solid var(--accent);
+    padding:20px 24px;
+  }
+  .site-header-inner{
+    max-width:1080px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .brand{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;font-size:24px;letter-spacing:.08em;color:var(--text)}
+  .brand span{color:var(--accent)}
+  .brand small{display:block;font-size:12px;letter-spacing:.2em;color:var(--muted)}
+  .back-link{font-size:14px;border:1px solid var(--accent);border-radius:999px;padding:6px 16px}
+  .back-link:hover{background:var(--accent);color:#fff;text-decoration:none}
+  .hero{background:var(--bg-light);padding:56px 24px 44px;text-align:center}
+  .hero h1{font-size:34px;margin-bottom:12px}
+  .hero h1::after{content:"";display:block;width:56px;height:3px;background:var(--accent);margin:16px auto 0}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto;font-size:15px}
+  main{max-width:1080px;margin:0 auto;padding:48px 24px 64px}
+  .post-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+    list-style:none;
+  }
+  .post-card{
+    border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fff;
+    display:flex;flex-direction:column;
+    transition:box-shadow .2s ease,transform .2s ease;
+  }
+  .post-card:hover{box-shadow:0 8px 24px rgba(34,34,34,.10);transform:translateY(-3px)}
+  .post-card-thumb{background:var(--bg-light);aspect-ratio:16/10;overflow:hidden}
+  .post-card-thumb img{width:100%;height:100%;object-fit:cover}
+  .post-card-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .post-meta{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+  .post-category{
+    background:var(--accent);color:#fff;font-size:12px;line-height:1;
+    padding:5px 10px;border-radius:999px;letter-spacing:.05em;
+  }
+  .post-card h2{font-size:19px}
+  .post-card h2 a{color:var(--text)}
+  .post-card h2 a:hover{color:var(--accent);text-decoration:none}
+  .post-excerpt{font-size:14px;color:#444;flex:1}
+  .read-more{font-size:14px;font-weight:700}
+  .read-more::after{content:" →"}
+  .status-message{
+    background:var(--bg-light);border:1px solid var(--border);border-radius:10px;
+    padding:28px 24px;text-align:center;color:var(--muted);font-size:15px;
+  }
+  .site-footer{
+    background:var(--bg-light);border-top:1px solid var(--border);
+    padding:28px 24px;text-align:center;font-size:13px;color:var(--muted);
+  }
+  .site-footer .brand-line{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho",serif;color:var(--text);font-size:15px;margin-bottom:6px}
+  @media (max-width:900px){
+    .post-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:600px){
+    .post-grid{grid-template-columns:1fr}
+    .hero{padding:40px 20px 32px}
+    .hero h1{font-size:27px}
+    .site-header{padding:16px 20px}
+    main{padding:36px 20px 48px}
+  }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <p class="brand">DARUMA <span>WORKS</span><small>だるまワークス</small></p>
+    <nav style="display:flex;gap:18px;font-size:13px;flex-wrap:wrap;align-items:center"><a href="../index.html">トップ</a><a href="../index.html#business">事業紹介</a><a href="../index.html#about-daruma">だるまについて</a><a href="index.html">ブログ</a><a href="../index.html#contact">お問い合わせ</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>ブログ・読みもの</h1>
+  <p>色の意味、サイズの選び方、目入れと供養の作法まで。だるまをもっと身近に、もっと楽しく選んでいただくための読みものです。</p>
+</section>
+
+<main>
+  <div id="post-list" aria-live="polite">
+    <p class="status-message" id="loading-message">記事を読み込んでいます…</p>
+  </div>
+  <noscript>
+    <p class="status-message">記事一覧の表示には JavaScript が必要です。お手数ですが、ブラウザの設定で JavaScript を有効にしてご覧ください。</p>
+  </noscript>
+</main>
+
+<footer class="site-footer">
+  <p class="brand-line">DARUMA WORKS（だるまワークス）</p>
+  <p>&copy; 2026 DARUMA WORKS. All rights reserved.</p>
+</footer>
+
+<script>
+(function () {
+  var container = document.getElementById('post-list');
+
+  function showFallback() {
+    container.innerHTML =
+      '<p class="status-message">記事一覧を読み込めませんでした。' +
+      'お手数ですが、時間をおいてページを再読み込みしてください。' +
+      'それでも表示されない場合は、トップページからお問い合わせください。</p>';
+  }
+
+  function escapeHtml(str) {
+    return String(str == null ? '' : str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatDate(iso) {
+    var parts = String(iso || '').split('-');
+    if (parts.length !== 3) return escapeHtml(iso);
+    return parts[0] + '年' + Number(parts[1]) + '月' + Number(parts[2]) + '日';
+  }
+
+  fetch('posts.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('posts.json could not be loaded');
+      return res.json();
+    })
+    .then(function (posts) {
+      if (!Array.isArray(posts) || posts.length === 0) {
+        container.innerHTML = '<p class="status-message">現在、公開中の記事はありません。次回の更新をお楽しみに。</p>';
+        return;
+      }
+      var html = '<ul class="post-grid">';
+      posts.forEach(function (post) {
+        var url = escapeHtml(post.slug) + '.html';
+        html += '<li class="post-card">'
+          + '<div class="post-card-thumb"><a href="' + url + '"><img src="' + escapeHtml(post.thumb) + '" alt="' + escapeHtml(post.title) + '" loading="lazy"></a></div>'
+          + '<div class="post-card-body">'
+          + '<p class="post-meta"><span class="post-category">' + escapeHtml(post.category) + '</span>'
+          + '<time datetime="' + escapeHtml(post.date) + '">' + formatDate(post.date) + '</time></p>'
+          + '<h2><a href="' + url + '">' + escapeHtml(post.title) + '</a></h2>'
+          + '<p class="post-excerpt">' + escapeHtml(post.excerpt) + '</p>'
+          + '<p><a class="read-more" href="' + url + '">読む</a></p>'
+          + '</div></li>';
+      });
+      html += '</ul>';
+      container.innerHTML = html;
+    })
+    .catch(function () {
+      showFallback();
+    });
+})();
+</script>
+</body>
+</html>
