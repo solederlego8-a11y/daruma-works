@@ -1,6 +1,6 @@
 # DARUMA WORKS（だるまワークス）
 
-> だるまの企画・製造・卸売・OEMを手がける公式サイト。オリジナルだるまの販売、法人向け名入れ・オリジナル制作、国内外への卸売と、だるまの文化を伝えるメディアを運営。運営：編集部。最終更新日：2026-11-16。
+> だるまの企画・製造・卸売・OEMを手がける公式サイト。オリジナルだるまの販売、法人向け名入れ・オリジナル制作、国内外への卸売と、だるまの文化を伝えるメディアを運営。運営：編集部。最終更新日：2026-11-21。
 
 ## 主要ページ
 
@@ -9,6 +9,7 @@
 
 ## 記事（代表）
 
+- [だるまを海外へ送るときの梱包と関税の基本](https://solederlego8-a11y.github.io/daruma-works/blog/post-overseas-shipping.html)
 - [だるまのOEM・オリジナル制作](https://solederlego8-a11y.github.io/daruma-works/blog/post-oem.html)
 - [高崎だるまについて](https://solederlego8-a11y.github.io/daruma-works/blog/post-takasaki.html)
 - [だるまの価格の決まり方](https://solederlego8-a11y.github.io/daruma-works/blog/post-price.html)
